@@ -35,6 +35,7 @@ echo "Press 1 To  Start SMS Bomber "
 echo "Press 2 To  Start MutliSms Bomber "
 echo "Press 3 To  Start SpeedX Bomber (AD) "
 echo "Press 4 To  Protect Your Number "
+echo "Press 8 To  Update SpeedX Bomber "
 echo "Press 9 To  Exit "
 echo "Press 0 To  Update "
 read ch
@@ -73,7 +74,7 @@ echo -e "\e[1;34m Only Premium..."
 exit
 elif [ $ch -eq 9 ];then
 clear
-elif [ $ch -eq 01 ];then
+elif [ $ch -eq 8 ];then
 clear
 cd
 rm -rf TBomb
