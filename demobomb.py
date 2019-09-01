@@ -16,7 +16,6 @@ except ModuleNotFoundError:
 
 try:
 	os.system('clear')
-echo  " "
 	print("Contact Me instagram.com/ichbinharun")
 	no = input("\033[1;37m[?] Enter Number (With Area Code but without '+') =>\033[1;36m ")
 	jum=int(input("\033[1;37m[?] Max 4 => \033[1;36m"))
