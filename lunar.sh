@@ -48,7 +48,6 @@ clear
 echo -e "\e[1;32m"
 rm *.xxx >/dev/null 2>&1
 python mutlidemobomber.py
-clear
 exit 0
 elif [ $ch -eq 3 ];then
 clear
