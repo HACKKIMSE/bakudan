@@ -45,8 +45,10 @@ rm *.xxx >/dev/null 2>&1
 exit 0
 elif [ $ch -eq 2 ];then
 clear
-Python mutlidemobomber.py
-Clear
+echo -e "\e[1;32m"
+rm *.xxx >/dev/null 2>&1
+python mutlidemobomber.py
+clear
 exit 0
 elif [ $ch -eq 3 ];then
 clear
