@@ -32,8 +32,9 @@ echo -e "\e[1;32m       Instagram: https://instagram.com/ichbinharun \e[0m"
 echo -e "\e[4;32m   YouTube Page: https://www.youtube.com/HarunMISTIK \e[0m"
 echo " "
 echo "Press 1 To  Start SMS Bomber "
-echo "Press 2 To  Protect Your Number "
-echo "Press 3 To  Exit "
+echo "Press 2 To  Start MutliSms Bomber "
+echo "Press 3 To  Protect Your Number "
+echo "Press 4 To  Exit "
 read ch
 if [ $ch -eq 1 ];then
 clear
@@ -44,9 +45,14 @@ rm *.xxx >/dev/null 2>&1
 exit 0
 elif [ $ch -eq 2 ];then
 clear
+Python mutlidemobomber.py
+Clear
+exit 0
+elif [ $ch -eq 3 ];then
+clear
 echo -e "\e[1;34m Only Premium..."
 exit
-elif [ $ch -eq 3 ];then
+elif [ $ch -eq 4 ];then
 clear
 echo -e "\e[1;31m"
 echo -e "\e[1;34m Created By \e[1;32m"
