@@ -54,7 +54,7 @@ elif [ $ch -eq 3 ];then
 clear
 echo -e "\e[1;32m"
 rm *.xxx >/dev/null 2>&1
-python bomber.py
+python3 bomber.py
 exit 0
 elif [ $ch -eq 4 ];then
 clear
