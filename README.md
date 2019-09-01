@@ -5,41 +5,41 @@ You can use the premium version join my discord.
 Discord Link SOON !
 ### Using
 
- and `Code` text
+`git clone github.com/m4zart/Lunars`
 
-`git clone github.com/m4zart/Lunars
+`cd Lunars`
 
-cd Lunars
+`chmod +x lunar.sh`
 
-chmod +x lunar.sh
-
-bash lunar.sh or ./lunar.sh`
+`bash lunar.sh or ./lunar.sh`
 
 
 ### Turkish 
 
-**Premium sürümü için discord sunucuma gelmeniz lazım.
+Premium sürümü için discord sunucuma gelmeniz lazım.
 
 Proje Linux&Termux ve Ubuntu Sistemlerinde Çalışmaktadır.
 
-Discord Katılım Linki Yakında ...**
+Discord Katılım Linki Yakında ...
 
 ### Free Version 
 
 No Ads.
 
+İnternational SMS
+
 ### Premium Version 
 
-**No Ads.
+No Ads.
 
 ∞ SMS SEND.
 
 SEND YOUR TEXT.
 
-PROTECT YOUR NUMBER.**
+PROTECT YOUR NUMBER.
 
 ### Support or Contact
 
 www.instagram.com/ichbinharun       & @ichbinharun
 
-**harunbusiness@aol.com**
+harunbusiness@aol.com
