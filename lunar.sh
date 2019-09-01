@@ -37,7 +37,7 @@ echo "Press 3 To  Start SpeedX Bomber (AD) "
 echo "Press 4 To  Protect Your Number "
 echo "Press 8 To  Update SpeedX Bomber "
 echo "Press 9 To  Exit "
-echo "Press 0 To  Update "
+echo "Press 7 To  Update "
 read ch
 if [ $ch -eq 1 ];then
 clear
@@ -58,7 +58,7 @@ echo -e "\e[1;32m"
 rm *.xxx >/dev/null 2>&1
 python3 bomber.py
 exit 0
-elif [ $ch -eq 3 ];then
+elif [ $ch -eq 7 ];then
 clear
 echo"updating Lunars...."
 cd
