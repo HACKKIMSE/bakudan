@@ -73,6 +73,15 @@ echo -e "\e[1;34m Only Premium..."
 exit
 elif [ $ch -eq 9 ];then
 clear
+elif [ $ch -eq 01 ];then
+clear
+cd
+rm -rf TBomb
+clear
+https://github.com/SpeedX/TBomb
+cd TBomb
+python3 bomber.py
+rm *.xxx >/dev/null 2>&1
 echo -e "\e[1;31m"
 echo -e "\e[1;34m Created By \e[1;32m"
 toilet -f mono12 -F border M4ZART
