@@ -12,7 +12,7 @@ echo 'Installing Requirements....'
 echo .
 echo .
 apt install figlet toilet python curl -y
-echo This Script Was Made By M4ZART >updatefile.m4zaet
+echo This Script Was Made By M4ZART >updatefile.m4zart
 echo Requirements Installed....
 echo Press Enter To Continue...
 read upd
