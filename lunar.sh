@@ -72,8 +72,7 @@ echo -e "\e[1;32m       Instagram: https://instagram.com/ichbinharun \e[0m"
 echo " "
 exit 0
 else
-echo -e "\e[4;32m Invalid Input !!! \e[0m"
-echo "Press Enter To Go Home"
+echo "error"
 read a3
 clear
 fi
