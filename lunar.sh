@@ -69,10 +69,7 @@ toilet -f mono12 -F border M4ZART
 echo -e "\e[1;34m For Any Queries Mail Me!!!\e[0m"
 echo -e "\e[1;32m           Mail: harunbusiness@aol.com \e[0m"
 echo -e "\e[1;32m       Instagram: https://instagram.com/ichbinharun \e[0m"
-echo " "
 exit 0
-else
-echo "error"
 read a3
 clear
 fi
