@@ -47,7 +47,7 @@ elif [ $ch -eq 2 ];then
 clear
 echo -e "\e[1;32m"
 rm *.xxx >/dev/null 2>&1
-python multidemobomber.py
+python multidemobomb.py
 exit 0
 elif [ $ch -eq 3 ];then
 clear
