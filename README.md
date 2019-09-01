@@ -26,6 +26,8 @@ Discord Katılım Linki Yakında ...
 
 No Ads.
 
+Multi Bombing
+
 İnternational SMS
 
 ### Premium Version 
@@ -36,9 +38,11 @@ No Ads.
 
 SEND YOUR TEXT.
 
+Multi Bombing.
+
 PROTECT YOUR NUMBER.
 
-### Support or Contact
+### Support or Contact Developer
 
 www.instagram.com/ichbinharun       & @ichbinharun
 
