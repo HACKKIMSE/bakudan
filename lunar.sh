@@ -65,8 +65,9 @@ cd
 rm -rf Lunars
 clear
 git clone https://github.com/m4zart/Lunars/
-clear
-echo "updated"
+cd Lunars
+chmod +x lunar.sh
+bash lunar.sh
 exit 0
 elif [ $ch -eq 4 ];then
 clear
