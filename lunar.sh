@@ -36,6 +36,7 @@ echo "Press 2 To  Start MutliSms Bomber "
 echo "Press 3 To  Start SpeedX Bomber (AD) "
 echo "Press 4 To  Protect Your Number "
 echo "Press 9 To  Exit "
+echo "Press 0 To  Update "
 read ch
 if [ $ch -eq 1 ];then
 clear
@@ -55,6 +56,16 @@ clear
 echo -e "\e[1;32m"
 rm *.xxx >/dev/null 2>&1
 python3 bomber.py
+exit 0
+elif [ $ch -eq 3 ];then
+clear
+echo"updating Lunars...."
+cd
+rm -rf Lunars
+clear
+git clone https://github.com/m4zart/Lunars/
+clear
+echo "updated"
 exit 0
 elif [ $ch -eq 4 ];then
 clear
