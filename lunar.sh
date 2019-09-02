@@ -42,6 +42,7 @@ echo "Press 9 To  Exit "
 read ch
 if [ $ch -eq 1 ];then
 clear
+cd Lunars
 echo -e "\e[1;32m"
 rm *.xxx >/dev/null 2>&1
 python3 demobomb.py
@@ -49,6 +50,7 @@ rm *.xxx >/dev/null 2>&1
 exit 0
 elif [ $ch -eq 2 ];then
 clear
+cd Lunars 
 echo -e "\e[1;32m"
 rm *.xxx >/dev/null 2>&1
 python multidemobomb.py
@@ -79,8 +81,10 @@ elif [ $ch -eq 8 ];then
 clear
 cd
 rm -rf TBomb
+cd Lunars
+rm -rf TBomb
 clear
-https://github.com/SpeedX/TBomb
+git clone https://github.com/SpeedX/TBomb
 echo "press enter to continue.."
 echo " "
 cd TBomb
