@@ -5,7 +5,7 @@ You can use the premium version join my discord.
 Discord Link SOON !
 ### Using
 
-`git clone github.com/m4zart/Lunars`
+`git clone https://github.com/m4zart/Lunars`
 
 `cd Lunars`
 
