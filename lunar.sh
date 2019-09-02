@@ -35,9 +35,10 @@ echo "Press 1 To  Start SMS Bomber "
 echo "Press 2 To  Start MutliSms Bomber "
 echo "Press 3 To  Start SpeedX Bomber (AD) "
 echo "Press 4 To  Protect Your Number "
+echo "Press 7 To  Update "
 echo "Press 8 To  Update SpeedX Bomber "
 echo "Press 9 To  Exit "
-echo "Press 7 To  Update "
+
 read ch
 if [ $ch -eq 1 ];then
 clear
@@ -54,6 +55,7 @@ python multidemobomb.py
 exit 0
 elif [ $ch -eq 3 ];then
 clear
+cd Lunars
 echo -e "\e[1;32m"
 rm *.xxx >/dev/null 2>&1
 python3 bomber.py
