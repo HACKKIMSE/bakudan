@@ -84,7 +84,7 @@ rm -rf TBomb
 cd Lunars
 rm -rf TBomb
 clear
-git clone https://github.com/SpeedX/TBomb
+git clone https://github.com/TheSpeedX/TBomb
 echo "press enter to continue.."
 echo " "
 cd TBomb
