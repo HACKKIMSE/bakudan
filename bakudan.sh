@@ -14,11 +14,6 @@ echo .
 apt install figlet
 apt install toilet
 apt install python
-apt install python-lzma
-apt install python3-lzma
-apt install python3-pip
-pip3 install urllib3
-pip3 install requests
 pip install -r requirements.txt
 echo This Script Was Made By M4ZART >updatefile.m4zart
 echo Requirements Installed....
