@@ -218,6 +218,7 @@ def start(target, counter, delay, ch, cc):
                     exit()
         print("================================================================")
         print("             Successful Requests     : ", success)
+        print("             Failed Requests         : ", failed)
         print("----------------------------------------------------------------")
         print("              Created By M4ZART                                 ")
         print("================================================================")
@@ -283,7 +284,7 @@ try:
         "https://raw.githubusercontent.com/m4zart/bakudan/master/.notify").read().decode('utf-8')
     noti = noti.upper().strip()
     if len(noti) > 10:
-        print('\n\n\tNOTIFICATION: ' + noti + '\n\n')
+        print(noti)
 except Exception:
     pass
 while True:
