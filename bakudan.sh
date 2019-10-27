@@ -52,11 +52,35 @@ clear
 cd bakudan
 echo -e "\e[1;32m"
 rm *.xxx >/dev/null 2>&1
+python lock.py
+clear
+print("")
+                   print('\033[1;32m                                               √  √ ')
+                   print('\033[1;32m                                             √  √ ')
+                   print('\033[1;32m                                           √  √ ')
+                   print('\033[1;32m                              √          √  √ ')
+                   print('\033[1;32m                             √  √      √  √ ')
+                   print('\033[1;32m                               √  √  √  √ ')
+                   print('\033[1;32m                                √   √ √ ')
+                   print('\033[1;32m                                 √  √ ')
+                   print("")
 python3 demobomb.py
 rm *.xxx >/dev/null 2>&1
 exit 0
 elif [ $ch -eq 2 ];then
 clear
+python lock.py
+clear
+print("")
+                   print('\033[1;32m                                               √  √ ')
+                   print('\033[1;32m                                             √  √ ')
+                   print('\033[1;32m                                           √  √ ')
+                   print('\033[1;32m                              √          √  √ ')
+                   print('\033[1;32m                             √  √      √  √ ')
+                   print('\033[1;32m                               √  √  √  √ ')
+                   print('\033[1;32m                                √   √ √ ')
+                   print('\033[1;32m                                 √  √ ')
+                   print("")
 cd bakudan
 echo -e "\e[1;32m"
 rm *.xxx >/dev/null 2>&1
