@@ -480,7 +480,7 @@ if ver != verl:
     print('\n\t\tAn Updates Available....')
     print('\tStarting Update...')
     update()
-print("Your Version is Okay")
+print(.version)
 print('\n\n\t\t\tStarting TBomb...\n\n')
 try:
     noti = urllib.request.urlopen(
