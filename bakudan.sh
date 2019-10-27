@@ -17,6 +17,7 @@ apt install python3-pip
 pip3 install urllib3
 pip3 install requests
 apt install figlet toilet python curl -y
+pip install -r requirements.txt
 echo This Script Was Made By M4ZART >updatefile.m4zart
 echo Requirements Installed....
 echo Press Enter To Continue...
