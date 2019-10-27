@@ -2,7 +2,7 @@
 clear
 echo -e "\e[4;31m M4ZART Productions !!! \e[0m"
 echo -e "\e[1;34m Presents \e[0m"
-echo -e "\e[1;32m Lunar Demo Mode \e[0m"
+echo -e "\e[1;32m Bakudan Demo Mode \e[0m"
 echo "Press Enter To Continue"
 read a1
 if [[ -s updatefile.m4zart ]];then
@@ -11,12 +11,14 @@ else
 echo 'Installing Requirements....'
 echo .
 echo .
+apt install figlet
+apt install toilet
+apt install python
 apt install python-lzma
 apt install python3-lzma
 apt install python3-pip
 pip3 install urllib3
 pip3 install requests
-apt install figlet toilet python curl -y
 pip install -r requirements.txt
 echo This Script Was Made By M4ZART >updatefile.m4zart
 echo Requirements Installed....
@@ -28,7 +30,7 @@ do
 rm *.xxx >/dev/null 2>&1
 clear
 echo -e "\e[1;31m"
-figlet Lunar DEMO
+figlet Bakudan DEMO
 echo -e "\e[1;34m Created By \e[1;32m"
 toilet -f mono12 -F border M4ZART
 echo -e "\e[4;34m This Bomber Was Created By M4ZART \e[0m"
@@ -42,13 +44,12 @@ echo "Press 2 To  Start MutliSms Bomber "
 echo "Press 3 To  Start İnf Bomber (Önerilir) "
 echo "Press 4 To  Protect Your Number "
 echo "Press 7 To  Update "
-echo "Press 8 To  Update SpeedX Bomber "
 echo "Press 9 To  Exit "
 
 read ch
 if [ $ch -eq 1 ];then
 clear
-cd Lunars
+cd bakudan
 echo -e "\e[1;32m"
 rm *.xxx >/dev/null 2>&1
 python3 demobomb.py
@@ -56,47 +57,33 @@ rm *.xxx >/dev/null 2>&1
 exit 0
 elif [ $ch -eq 2 ];then
 clear
-cd Lunars 
+cd bakudan
 echo -e "\e[1;32m"
 rm *.xxx >/dev/null 2>&1
 python multidemobomb.py
 exit 0
 elif [ $ch -eq 3 ];then
 clear
-cd Lunars
+cd bakudan
 echo -e "\e[1;32m"
 rm *.xxx >/dev/null 2>&1
-python3 bomber.py
+python3 newbomber.py
 exit 0
 elif [ $ch -eq 7 ];then
 clear
-echo"updating Lunars...."
+echo"updating bakudan...."
 cd
-rm -rf Lunars
+rm -rf bakudan
 clear
-git clone https://github.com/m4zart/Lunars/
-cd Lunars
-chmod +x lunar.sh
-bash lunar.sh
+git clone https://github.com/m4zart/bakudan/
+cd bakudan
+chmod +x bakudan.sh
+bash bakudan.sh
 exit 0
 elif [ $ch -eq 4 ];then
 clear
 echo -e "\e[1;34m Only Premium..."
 exit
-elif [ $ch -eq 8 ];then
-clear
-cd
-rm -rf TBomb
-cd Lunars
-rm -rf TBomb
-clear
-git clone https://github.com/TheSpeedX/TBomb
-echo "press enter to continue.."
-echo " "
-cd TBomb
-clear
-python3 bomber.py
-rm *.xxx >/dev/null 2>&1
 elif [ $ch -eq 9 ];then
 clear
 echo -e "\e[1;31m"
