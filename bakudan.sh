@@ -60,7 +60,7 @@ elif [ $ch -eq 3 ];then
 clear
 echo -e "\e[1;32m"
 rm *.xxx >/dev/null 2>&1
-python2 lock.py
+python3 lock.py
 python3 newbomber.py
 exit 0
 elif [ $ch -eq 7 ];then
