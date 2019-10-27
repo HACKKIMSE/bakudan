@@ -421,11 +421,11 @@ def start(target, counter, delay, ch, cc):
                         '\t\tPlease Send A Mail To ggspeedx29@gmail.com To Let Us Know...')
                     input('Press Enter To Exit...')
                     exit()
-        print("==================================================================")
+        print("================================================================")
         print("             Successful Requests     : ", success)
-        print("------------------------------------------------------------------")
-        print("              Created By M4ZART                                   ")
-        print("==================================================================")
+        print("----------------------------------------------------------------")
+        print("              Created By M4ZART                                 ")
+        print("================================================================")
 
         try:
             result = getapi(target, api, cc)
