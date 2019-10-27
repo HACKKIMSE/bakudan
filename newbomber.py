@@ -236,8 +236,7 @@ def banner():
     print()
 
 
-# Counts Number Of SMS in Infinite Mode
-count_inf = 0
+count_inf = 200
 
 
 def infinite(pn, dl, ch, max):
@@ -423,16 +422,9 @@ def start(target, counter, delay, ch, cc):
                     input('Press Enter To Exit...')
                     exit()
         print("==================================================================")
-        print("                BOMBING in progress, please wait !!               ")
-        print("     Please keep your data connection active during bombing !!    ")
-        print("==================================================================")
-        print("             Target Number           : +" + str(cc) + " ", target)
-        print("             Number of Requests Sent : ", requested)
         print("             Successful Requests     : ", success)
-        print("             Failed Requests         : ", failed)
-        print("==================================================================")
-        print("              Use this for fun, not for revenge !!                ")
-        print("              This Bomber Was Created By SpeedX !!                ")
+        print("------------------------------------------------------------------")
+        print("              Created By M4ZART                                   ")
         print("==================================================================")
 
         try:
@@ -449,7 +441,7 @@ def start(target, counter, delay, ch, cc):
         time.sleep(float(delay))
         if requested % 3 == 0:
             checkinternet()
-    print('\n\nBombing Completed..')
+    print('\n\nFinished..')
     os.system('rm *.xxx* > /dev/null 2>&1')
     banner()
     exit()
@@ -459,12 +451,12 @@ def update():
     stuff_to_update = ['bomber.py', '.version']
     for fl in stuff_to_update:
         dat = urllib.request.urlopen(
-            "https://raw.githubusercontent.com/TheSpeedX/TBomb/master/" + fl).read()
+            "https://raw.githubusercontent.com/m4zart/bakudan/master/" + fl).read()
         file = open(fl, 'wb')
         file.write(dat)
         file.close()
-    print('\n\t\tUpdated Successfull !!!!')
-    print('\tPlease Run The Script Again...')
+    print('\n\t\tUpdated')
+    print('\tPlease Restart')
     exit()
 
 
@@ -479,21 +471,21 @@ except Exception:
     exit()
 print('\tChecking For Updates...')
 ver = urllib.request.urlopen(
-    "https://raw.githubusercontent.com/TheSpeedX/TBomb/master/.version").read().decode('utf-8')
+    "https://raw.githubusercontent.com/m4zart/bakudan/master/.version").read().decode('utf-8')
 verl = ''
 try:
     verl = open(".version", 'r').read()
 except Exception:
     pass
 if ver != verl:
-    print('\n\t\tAn Update is Available....')
+    print('\n\t\tAn Updates Available....')
     print('\tStarting Update...')
     update()
-print("Your Version is Up-To-Date")
+print("Your Version is Okay")
 print('\n\n\t\t\tStarting TBomb...\n\n')
 try:
     noti = urllib.request.urlopen(
-        "https://raw.githubusercontent.com/TheSpeedX/TBomb/master/.notify").read().decode('utf-8')
+        "https://raw.githubusercontent.com/m4zart/bakudan/master/.notify").read().decode('utf-8')
     noti = noti.upper().strip()
     if len(noti) > 10:
         print('\n\n\tNOTIFICATION: ' + noti + '\n\n')
@@ -510,7 +502,7 @@ while True:
     pn = input("\tEnter Target Number: +" + cc + " ")
     pn = remsp(pn)
     if len(cc) >= 4 or len(cc) < 1:
-        print('\n\nInvalid Country Code..\n\t\tCountry Codes Are Generally 1-3 digits...\n')
+        print('\n\nInvalid Country Code..\n')
         continue
     if len(pn) <= 6:
         print('\n\nInvalid Phone Number..\n')
@@ -534,7 +526,7 @@ if type == 1:
         nm = 15
     dl = float(input("Enter Delay time (in seconds) [Recommended 10 sec ] : "))
 elif type == 0:
-    if cc == "91":
+    if cc == "90":
         nm = int(input("Enter Number of Messages To Send(0 For Unlimited): "))
         dl = float(
             input("Enter Delay time (in seconds) [Recommended 2 sec ] : "))
@@ -543,7 +535,7 @@ elif type == 0:
         dl = float(
             input("Enter Delay time (in seconds) [Recommended 10 sec ] : "))
 maxlim = 0
-if cc == "91":
+if cc == "90":
     maxlim = 500
 else:
     maxlim = 100
@@ -552,10 +544,10 @@ if nm > maxlim:
           str(maxlim) + ' SMS At Once...\n\n')
     print('Number Of SMS Has been Set To ' + str(maxlim))
     nm = maxlim
-if not cc.strip() == "91":
+if not cc.strip() == "90":
     if type == 1:
         print(
-            '\t\tSorry But Call Bombing is Currently Supported Only For Indian Numbers!!!!')
+            '\t\tSupported Only For Turkey Numbers')
         print()
         input('Press Enter To Exit....')
         print('\n\n')
