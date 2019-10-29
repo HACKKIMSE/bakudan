@@ -34,15 +34,16 @@ echo -e "\e[1;32m       Instagram: https://instagram.com/ichbinharun \e[0m"
 echo -e "\e[4;32m   YouTube Page: https://www.youtube.com/HarunMISTIK \e[0m"
 echo " "
 echo "Press 1 To  Start New SMS Bomber (recommended)"
-echo "Press 2 To  Start Call Bomber "
-echo "Press 3 To  Update (Works On Linux And Linux Emulators) "
+echo "Press 2 To  Start Call Bomber"
+echo "Press 3 To  Update"
 echo "Press 4 To  Start MutliSms Bomber"
 echo "Press 5 To  Start Old SMS Bomber"
-echo "Press 6 To  Protect Your Number "
+echo "Press 6 To  Protect Your Number"
 echo "Press 9 To  Exit "
 
 read ch
-elif [ $ch -eq 2 ];then
+
+if [ $ch -eq 2 ];then
 clear
 echo -e "\e[1;32m"
 echo 'Call Bomb'> call.xxx
@@ -68,7 +69,7 @@ echo -e "\e[1;34m Press Enter To Proceed To Restart..."
 read a6
 ./TBomb.sh
 exit
-if [ $ch -eq 5 ];then
+elif [ $ch -eq 5 ];then
 clear
 cd bakudan
 echo -e "\e[1;32m"
