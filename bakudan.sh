@@ -33,15 +33,15 @@ echo -e "\e[1;32m           Mail: harunbusiness@aol.com \e[0m"
 echo -e "\e[1;32m       Instagram: https://instagram.com/ichbinharun \e[0m"
 echo -e "\e[4;32m   YouTube Page: https://www.youtube.com/HarunMISTIK \e[0m"
 echo " "
-echo "Press 1 To  Start SMS Bomber "
-echo "Press 2 To  Start MutliSms Bomber "
-echo "Press 3 To  Start İnf Bomber (Önerilir) "
+echo "Press 1 To  Start New SMS Bomber (recommended)"
+echo "Press 2 To  Start MutliSms Bomber"
+echo "Press 3 To  Start Old SMS Bomber"
 echo "Press 4 To  Protect Your Number "
 echo "Press 7 To  Update "
 echo "Press 9 To  Exit "
 
 read ch
-if [ $ch -eq 1 ];then
+if [ $ch -eq 3 ];then
 clear
 cd bakudan
 echo -e "\e[1;32m"
@@ -56,7 +56,7 @@ echo -e "\e[1;32m"
 rm *.xxx >/dev/null 2>&1
 python multidemobomb.py
 exit 0
-elif [ $ch -eq 3 ];then
+elif [ $ch -eq 1 ];then
 clear
 echo -e "\e[1;32m"
 rm *.xxx >/dev/null 2>&1
