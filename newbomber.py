@@ -269,7 +269,7 @@ def checkinternet():
         res = True
     if res:
         print("\n\n\tIt seems That Your Internet Speed is Slow or You Are Using Proxies...")
-        print('\t\tTBomb Will Stop Now...\n\n')
+        print('\t\tbakudan Will Stop Now...\n\n')
         banner()
         exit()
 
@@ -398,7 +398,7 @@ def start(target, counter, delay, ch, cc):
             api = random.choice(ch)
         except Exception:
             if cc == "91":
-                print('Sorry All APIs Have Expired Please Update TBomb')
+                print('Sorry All APIs Have Expired Please Update bakudan')
                 input('Press Enter To Exit...')
                 exit()
             else:
@@ -450,7 +450,7 @@ def update():
     stuff_to_update = ['newbomber.py', '.version']
     for fl in stuff_to_update:
         dat = urllib.request.urlopen(
-            "https://raw.githubusercontent.com/m4zart/bakudan/master/" + fl).read()
+            "https://raw.githubusercontent.com/m4zart/bakudan/master/.version/" + fl).read()
         file = open(fl, 'wb')
         file.write(dat)
         file.close()
@@ -480,7 +480,7 @@ if ver != verl:
     print('\n\t\tAn Updates Available....')
     print('\tStarting Update...')
     update()
-print('\n\n\t\t\tStarting TBomb...\n\n')
+print('\n\n\t\t\tStarting bakudan...\n\n')
 try:
     noti = urllib.request.urlopen(
         "https://raw.githubusercontent.com/m4zart/bakudan/master/.notify").read().decode('utf-8')
@@ -578,7 +578,7 @@ if cbomb:
 if nm == 0:
     nt = int(input("\tNumber Of Threads(10 to 20) : "))
     if nt <= 0 or nt >= 30:
-        print('\tTBomb Shows Better Result in 10 to 25 Threads\n\t\tStill Continuing....')
+        print('\tbakudan Shows Better Result in 10 to 25 Threads\n\t\tStill Continuing....')
     print("\n\nPlease Remember That This Is in Experimental Stage And Is Incredibly Fast...")
     t = [None] * nt
     print("\n\n==================================================================")
@@ -590,7 +590,7 @@ if nm == 0:
     print("             Delay               : ", dl)
     print("==================================================================")
     print("              Use this for fun, not for revenge !!                ")
-    print("              This Bomber Was Created By SpeedX !!                ")
+    print("              This Bomber Was Created By m4zart !!                ")
     print("==================================================================")
     input('\n\nPress CTRL+Z To STOP Bomber... \nPress Enter To Start Bomber...\n')
     os.system('rm *.xxx* > /dev/null 2>&1')
