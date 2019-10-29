@@ -34,14 +34,41 @@ echo -e "\e[1;32m       Instagram: https://instagram.com/ichbinharun \e[0m"
 echo -e "\e[4;32m   YouTube Page: https://www.youtube.com/HarunMISTIK \e[0m"
 echo " "
 echo "Press 1 To  Start New SMS Bomber (recommended)"
-echo "Press 2 To  Start MutliSms Bomber"
-echo "Press 3 To  Start Old SMS Bomber"
-echo "Press 4 To  Protect Your Number "
-echo "Press 7 To  Update "
+echo "Press 2 To  Start Call Bomber "
+echo "Press 3 To  Update (Works On Linux And Linux Emulators) "
+echo "Press 4 To  Start MutliSms Bomber"
+echo "Press 5 To  Start Old SMS Bomber"
+echo "Press 6 To  Protect Your Number "
 echo "Press 9 To  Exit "
 
 read ch
-if [ $ch -eq 3 ];then
+elif [ $ch -eq 2 ];then
+clear
+echo -e "\e[1;32m"
+echo 'Call Bomb'> call.xxx
+python3 newbomber.py call
+rm *.xxx >/dev/null 2>&1
+exit 0
+elif [ $ch -eq 3 ];then
+clear
+apt install git -y
+echo -e "\e[1;34m Downloading Latest Files..."
+git clone https://github.com/m4zart/bakudan/
+if [[ -s bakudan/bakudan.sh ]];then
+cd bakudan
+cp -r -f * .. > temp
+cd ..
+rm -rf  bakudan >> temp
+rm updatefile.m4zart >> temp
+rm temp
+chmod +x bakudan.sh
+fi
+echo -e "\e[1;32m All The Required Packages Will Be Installed..."
+echo -e "\e[1;34m Press Enter To Proceed To Restart..."
+read a6
+./TBomb.sh
+exit
+if [ $ch -eq 5 ];then
 clear
 cd bakudan
 echo -e "\e[1;32m"
@@ -49,7 +76,7 @@ rm *.xxx >/dev/null 2>&1
 python3 demobomb.py
 rm *.xxx >/dev/null 2>&1
 exit 0
-elif [ $ch -eq 2 ];then
+elif [ $ch -eq 4 ];then
 clear
 cd bakudan
 echo -e "\e[1;32m"
@@ -74,7 +101,7 @@ cd bakudan
 chmod +x bakudan.sh
 bash bakudan.sh
 exit 0
-elif [ $ch -eq 4 ];then
+elif [ $ch -eq 6 ];then
 clear
 echo -e "\e[1;34m Only Premium..."
 exit
